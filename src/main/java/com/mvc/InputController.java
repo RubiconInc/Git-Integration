@@ -15,7 +15,7 @@ public class InputController {
     Logger log= Logger.getLogger(this.getClass());
     @RequestMapping(value = "/print", method = RequestMethod.GET)
     public Object printMyName(){
-        return "hello";
+        return "hello_gellow";
     }
 
 }
