@@ -1,7 +1,9 @@
 package com.mvc;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by Administrator on 5/21/2014.
@@ -10,5 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping(value = "/")
 public class InputController {
-	@RequestMappin
+    Logger log= Logger.getLogger(this.getClass());
+    @RequestMapping(value = "/print", method = RequestMethod.GET)
+    public Object printMyName(){
+        return "hello";
+    }
+
 }
